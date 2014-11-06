@@ -14,5 +14,10 @@ namespace VoxelEngine.GameWindows
             get { return base.Text; }
             set { base.Text = value; }
         }
+
+        public void SetDimensions(int width, int height)
+        {
+            
+        }
     }
 }

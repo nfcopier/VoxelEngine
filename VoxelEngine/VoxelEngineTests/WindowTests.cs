@@ -7,11 +7,25 @@ namespace VoxelEngineTests
     [TestClass]
     public class MainWindow
     {
+        private VoxelEngine.GameWindows.MainWindow _testWindow
+            = new VoxelEngine.GameWindows.MainWindow("Test Window");
+
         [TestMethod]
         public void CanBeDisplayed()
         {
             Application.EnableVisualStyles();
-            Application.Run(new VoxelEngine.GameWindows.MainWindow("Test Window"));
+            Application.Run(_testWindow);
+        }
+
+        [TestMethod]
+        public void CanSetDimensions()
+        {
+            const int width = 1000, height = 700;
+            _testWindow.SetDimensions(width, height);
+            Assert.AreEqual(_testWindow.Width, width);
+            Assert.AreEqual(_testWindow.Height, height);
+
+
         }
     }
 }
