@@ -11,7 +11,7 @@ namespace VoxelEngineTests
         public void CanBeDisplayed()
         {
             Application.EnableVisualStyles();
-            Application.Run(new VoxelEngine.GameWindows.MainWindow());
+            Application.Run(new VoxelEngine.GameWindows.MainWindow("Test Window"));
         }
     }
 }
