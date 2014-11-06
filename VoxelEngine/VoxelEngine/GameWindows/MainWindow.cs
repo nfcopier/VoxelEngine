@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VoxelEngine
+namespace VoxelEngine.GameWindows
 {
-    public static class AppStart
+    public class MainWindow : Form
     {
-        public static void Main()
+        public MainWindow()
         {
+            this.Text = "Voxel Engine";
         }
     }
 }
