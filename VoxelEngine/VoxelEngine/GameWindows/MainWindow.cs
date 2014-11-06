@@ -1,4 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace VoxelEngine.GameWindows
@@ -8,6 +11,11 @@ namespace VoxelEngine.GameWindows
         public MainWindow(string text)
         {
             this.Text = text;
+            var appFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/VoxelEngine/";
+            if (File.Exists(appFolder + "MainWindow.ico"))
+            {
+                this.Icon = new Icon(appFolder + "MainWindow.ico");
+            }
         }
         public MainWindow(string text, int width, int height)
             : this(text)
