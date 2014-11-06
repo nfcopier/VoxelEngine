@@ -20,12 +20,11 @@ namespace VoxelEngineTests
         [TestMethod]
         public void CanSetDimensions()
         {
+            _testWindow.Show();
             const int width = 1000, height = 700;
             _testWindow.SetDimensions(width, height);
             Assert.AreEqual(_testWindow.Width, width);
             Assert.AreEqual(_testWindow.Height, height);
-
-
         }
     }
 }

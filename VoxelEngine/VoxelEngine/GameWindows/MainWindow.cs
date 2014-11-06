@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace VoxelEngine.GameWindows
 {
@@ -17,7 +18,13 @@ namespace VoxelEngine.GameWindows
 
         public void SetDimensions(int width, int height)
         {
-            
+            var workingArea = Screen.PrimaryScreen.WorkingArea;
+            var left = (workingArea.Width - width) / 2;
+            var top = (workingArea.Height - height) / 2;
+            this.Left = left;
+            this.Top = top;
+            this.Width = width;
+            this.Height = height;
         }
     }
 }
