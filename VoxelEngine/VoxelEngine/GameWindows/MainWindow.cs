@@ -9,6 +9,11 @@ namespace VoxelEngine.GameWindows
         {
             this.Text = text;
         }
+        public MainWindow(string text, int width, int height)
+            : this(text)
+        {
+            this.SetDimensions(width, height);
+        }
 
         public override sealed string Text
         {

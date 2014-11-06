@@ -8,7 +8,7 @@ namespace VoxelEngineTests
     public class MainWindow
     {
         private VoxelEngine.GameWindows.MainWindow _testWindow
-            = new VoxelEngine.GameWindows.MainWindow("Test Window");
+            = new VoxelEngine.GameWindows.MainWindow("Test Window", 1200, 750);
 
         [TestMethod]
         public void CanBeDisplayed()
