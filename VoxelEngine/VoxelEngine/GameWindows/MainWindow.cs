@@ -21,10 +21,7 @@ namespace VoxelEngine.GameWindows
             var workingArea = Screen.PrimaryScreen.WorkingArea;
             var left = (workingArea.Width - width) / 2;
             var top = (workingArea.Height - height) / 2;
-            this.Left = left;
-            this.Top = top;
-            this.Width = width;
-            this.Height = height;
+            this.Bounds = new Rectangle(left, top, width, height);
         }
     }
 }
